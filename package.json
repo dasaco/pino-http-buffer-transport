@@ -1,0 +1,25 @@
+{
+  "name": "pino-http-buffer-transport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasaco/pino-http-buffer-transport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dasaco/pino-http-buffer-transport/issues"
+  },
+  "homepage": "https://github.com/dasaco/pino-http-buffer-transport#readme",
+  "dependencies": {
+    "pino-pretty": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.0"
+  }
+}
