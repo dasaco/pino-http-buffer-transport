@@ -1,7 +1,7 @@
 # pino-http-buffer-transport
 
 This pino transport allows to output debug logs only when request has errored.
-This way AWS Cloudwatch (or any other log provider) bill will be smaller, as there useless logs will not be outputted.
+This way you can have lower your cost of AWS Cloudwatch (or any other log provider) because redundant logs will not be outputted.
 
 By default pino logs all logs, unless otherwise specified by log levels. You can ignore debug logs in production by specifying logLevel in options, but it is very useful to have debug logs in production in case any issue happens.
 
