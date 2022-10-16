@@ -3,16 +3,17 @@ import { LogBufferOptions, LogLevelName, logLevelToValueMap, LogObject } from '.
 
 export class LogBuffer {
   logStorage: { [key: string]: { [level: number]: LogObject[] } } = {};
-
   options: LogBufferOptions;
+  prettyPrinter: (logObject: LogObject) => string;
 
   constructor(options: LogBufferOptions) {
     this.options = options;
+    this.prettyPrinter = prettyFactory(
+      options.prettyOptions || {
+        colorize: true,
+      },
+    );
   }
-
-  private prettyPrinter = prettyFactory({
-    colorize: true,
-  });
 
   private shouldLogBufferedLogs(statusCode: number): LogLevelName[] {
     const toReleaseLevels: LogLevelName[] = [];

@@ -18,7 +18,7 @@ export default async (opts: LogBufferOptions) => {
     });
 
     pipeline(source, stream, destination, () => {
-      // No actions needed here.
+      // Pipeline finished
     });
   });
 };

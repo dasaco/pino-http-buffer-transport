@@ -1,3 +1,5 @@
+import { PrettyOptions } from 'pino-pretty';
+
 // Pino-Http attaches request context to the log object.
 export interface LogObject {
   reqId: string;
@@ -32,4 +34,5 @@ export type LogBufferOptions = {
       statusCode: number | NumberRange;
     };
   };
+  prettyOptions?: PrettyOptions;
 };
