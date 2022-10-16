@@ -1,6 +1,7 @@
-import build from "pino-abstract-transport";
-import { pipeline, Transform } from "node:stream";
-import { LogBuffer, LogBufferOptions } from "./log-buffer";
+import build from 'pino-abstract-transport';
+import { pipeline, Transform } from 'node:stream';
+import { LogBuffer } from './log-buffer';
+import { LogBufferOptions } from './types';
 
 export default async (opts: LogBufferOptions) => {
   const destination = process.stdout;
@@ -16,6 +17,8 @@ export default async (opts: LogBufferOptions) => {
       },
     });
 
-    pipeline(source, stream, destination, () => {});
+    pipeline(source, stream, destination, () => {
+      // No actions needed here.
+    });
   });
 };
